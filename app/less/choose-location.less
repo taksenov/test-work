@@ -1,0 +1,444 @@
+/* -------= imports =------- */
+@import "fonts";
+@import "variables";
+@import "button";
+@import "mixins";
+/* -------= imports =------- */
+
+/* -------= choose-location =------- */
+.coose-location-map-bg {
+    margin-top: 0;
+    background: url("../static/img/map-bg.jpg") no-repeat center center /*fixed*/;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    min-height: @choose-location-min-height;
+    max-height: @choose-location-max-height;
+    z-index: 1;
+    opacity: 0.999999;
+}
+
+.choose-location__main-form {
+    margin-top: 66px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-shadow: 0 5px 15px 2px rgba(2, 3, 3, 0.26);
+    -moz-box-shadow: 0 5px 15px 2px rgba(2, 3, 3, 0.26);
+    box-shadow: 0 5px 15px 2px rgba(2, 3, 3, 0.26);
+    min-height: 200px;
+    max-height: 8000px;
+}
+
+.location__icon-image-center {
+    position: relative;
+    height: 86px;
+}
+
+.location__icon-image-center img {
+    position: absolute;  /* подробнее про position: absolute; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.transiotion__form {
+    opacity:0.69;
+    filter:alpha(opacity=69);
+    -moz-opacity:0.69;
+    background-color: #FFFFFF;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.location__header {
+    .arial-bold;
+    font-size: 33px;
+}
+
+
+.choose-block__book-now {
+    /*
+    @width: 188px,              = ширина
+    @height: 49px,              = высота
+    @bradius: 23px,             = радиус уголков
+    @bg-color1: #b71f33,        = градиент для фона номер 1
+    @bg-color2: #dd234e,        = градиент для фона номер 2
+    @hover-bg-color1: #d72034,  = градиент для фона при ховере номер 1
+    @hover-bg-color2: #f4234f,  = градиент для фона при ховере номер 2
+    @font-color: #ffffff,       = цвет шрифта
+    @box-shadow-top: #ffffff,   = цвет тени сверху кнопки
+    @box-shadow-bottom: #79041f = цвет тени снизу кнопки
+    @border-color: #79041f      = wdtn uhfybws
+     */
+    .questoria-button(176px, 49px, 23px, #b71f33, #dd234e,
+                        #d72034, #f4234f, #ffffff, #ffffff, #79041f, #79041f );
+
+    z-index: 9999;
+}
+
+.location__choose {
+    .clearfix;
+}
+
+.choose__label,
+.choose__select {
+    float: left;
+    margin-right: 14px;
+}
+
+.choose__label {
+    .arial-bold;
+    font-size: 26px;
+}
+
+.choose__select {
+    z-index: 10000;
+}
+
+.div-for-center-main {
+    display: block;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.div-for-center-child {
+    max-width: 782px;
+    max-height: 50px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+/* -------= select =------- */
+
+/* Selects */
+/* General Select */
+label.selectGeneral
+{
+    display: block;
+    position: relative;
+
+    width: 250px;
+    height: 40px;
+
+    font-size: 18px;
+    font-weight: normal;
+
+    margin: 0px 0;
+
+    border: 1px solid #d6d6d6;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+label.selectGeneral:before
+{
+    content: attr(placeholder);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    max-width: 100%;
+    height: 37px;
+
+    padding-left: 10px;
+
+    text-align: left;
+    line-height: 37px;
+    white-space: nowrap;
+
+    color: #adadad;
+
+    overflow-x: hidden;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+label.selectGeneral:after
+{
+    content: url("../static/img/select-arrow.png");
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 37px;
+    height: 37px;
+
+    text-align: center;
+    line-height: 37px;
+
+    background-color: transparent;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+label.selectGeneral label
+{
+    .arial-regular;
+    font-size: 16px;
+    color: #4071b6;
+
+    display: inline-block;
+
+    min-width: 100%;
+    height: 37px;
+
+    font-weight: normal;
+    line-height: 37px;
+    white-space: nowrap;
+
+    padding: 0 10px;
+
+    background: url("../static/img/select-bg.png") left repeat-x;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    margin-bottom: 0;
+
+    &:last-child {
+        //верхнего левого, верхнего правого, нижнего правого и нижнего левого уголка.
+        -webkit-border-radius: 0 0 6px 6px;
+        -moz-border-radius: 0 0 6px 6px;
+        border-radius: 0 0 6px 6px;
+    }
+
+    img {
+        margin-right: 11px;
+    }
+
+}
+
+label.selectGeneral input,
+label.selectGeneral label
+{
+    display: none;
+}
+
+label.selectGeneral div
+{
+    min-width: 100%;
+    max-height: 500px;
+
+    overflow-x: hidden;
+}
+
+label.selectGeneral input[type="radio"]:checked ~ div
+{
+    position: absolute;
+    top: 37px;
+    //z-index: 999;
+
+    overflow-y: auto;
+
+//    box-shadow: -3px 0 0 #d6d6d6, 3px 0 0 #d6d6d6;
+//    border-top: 3px solid #d6d6d6;
+//    border-bottom: 3px solid #d6d6d6;
+}
+
+label.selectGeneral input[type="radio"]:checked ~ div > label,
+label.selectGeneral input[type="radio"]:checked + label
+{
+    display: block;
+}
+
+label.selectGeneral input[type="radio"]:checked ~ div > label:hover
+{
+    //background-color: #ffa834;
+    background: url("../static/img/select-bg-hover.png") left repeat-x;
+}
+
+label.selectGeneral input[type="radio"]:not(:checked) ~ div > input[type="radio"]:checked + label
+{
+    position: relative;
+    z-index: -1; // не убирать!
+}
+
+.selectGeneral {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 3px 1px rgba(2, 3, 3, 0.26);
+    -moz-box-shadow: 0 2px 3px 1px rgba(2, 3, 3, 0.26);
+    box-shadow: 0 2px 3px 1px rgba(2, 3, 3, 0.26);
+}
+/* -------= select =------- */
+
+@media screen and (max-width: 768px) {
+
+    .div-for-center-main {
+        margin-bottom: 110px;
+    }
+
+    .choose-location__main-form {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .choose__label,
+    .choose__select,
+    .chose__button {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .location__header {
+        .arial-bold;
+        font-size: 26px;
+    }
+
+    .choose__label {
+        .arial-bold;
+        font-size: 18px;
+    }
+
+    .location__icon {
+        margin-top: 10px;
+    }
+
+    .selectssss {
+        position: relative;
+        height: 50px;
+        z-index: 9999;
+    }
+
+    .selectssss-xs-center .selectGeneral {
+        position: absolute;  /* подробнее про position: absolute; */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 999999 !important;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 993px) {
+
+        .div-for-center-main {
+        margin-bottom: 110px;
+    }
+
+    .choose-location__main-form {
+        margin-top: 30px;
+    }
+
+    .choose__label,
+    .choose__select,
+    .chose__button {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .location__icon {
+        margin-top: 10px;
+    }
+
+    .selectssss {
+        position: relative;
+        height: 50px;
+        z-index: 9999;
+    }
+
+    .selectssss-xs-center .selectGeneral {
+        position: absolute;  /* подробнее про position: absolute; */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 999999 !important;
+    }
+
+}
+
+.location__icon {
+    margin-top: 42px;
+    margin-bottom: 16px;
+}
+
+.location__header {
+    margin-bottom: 24px;
+}
+
+.choose__label {
+    margin-top: 8px;
+}
+
+.selectssss {
+    margin-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------= choose-location =------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
